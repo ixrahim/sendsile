@@ -28,7 +28,7 @@ const Header = () => {
                 <a href={link.path} className="text-white flex mx-4">
                   <span className="text-base items-center font-[500] gap-1 text-[#36454F]">
                     {link.name}
-                    {idx == 1 && <FaChevronDown width="159px" height="29px" />}
+                    {idx === 1 && <FaChevronDown width="159px" height="29px" />}
                   </span>
                 </a>
               </>

@@ -9,7 +9,6 @@ import Layout from "./components/Layout/Layout";
 import Homepage from "./pages/home";
 
 import {} from "./pages/general/index";
-import { ROUTE } from "./routes";
 
 function App() {
   const router = createBrowserRouter(

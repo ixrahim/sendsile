@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Text } from "../Layout/helpers";
+import { Text } from "../Layout/helpers";
 import lotus from "../../assets/png/lotus.png";
 
 const Section1 = () => {

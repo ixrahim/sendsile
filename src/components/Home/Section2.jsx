@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Text, Title } from "../Layout/helpers";
+import { Text, Title } from "../Layout/helpers";
 import { FaArrowRight } from "react-icons/fa";
 import laundry from "../../assets/png/laundry.png";
 
