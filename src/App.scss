@@ -1,0 +1,13 @@
+.container {
+  max-width: 1204px !important;
+
+  @apply mx-auto px-4 lg:px-5;
+  @media (min-width: 1280px) {
+    width: 100% !important;
+    max-width: 1200px !important;
+  }
+}
+
+#root {
+  background: #fffcf7;
+}
