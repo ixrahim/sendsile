@@ -17,7 +17,7 @@ const Section1 = ({ isMobile }) => {
               $lineHeight={isMobile ? "28.4px" : "62.4px"}
               color="#00070C"
               $fontWeight="500"
-              className="mr-6"
+              className="xs:mr-6 lg:mr-6"
             >
               Sendsile has {!isMobile && <br />} you covered
             </Text>
