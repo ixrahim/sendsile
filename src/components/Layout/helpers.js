@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import _ from "lodash";
-import { px2vw } from "../../utils/helpers";
 
 const Title = styled.h1`
   font-size: ${(props) => props.$fontSize || "32px"};

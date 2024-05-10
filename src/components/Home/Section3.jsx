@@ -8,7 +8,6 @@ import card_img2 from "../../assets/png/card_img2.png";
 import card_img3 from "../../assets/png/card_img3.png";
 import Carousel from "../Carousel";
 import { carouselData } from "./helper";
-import EachCarousel from "../Carousel/eachCarousel";
 
 const Section3 = ({ isMobile }) => {
   return (
