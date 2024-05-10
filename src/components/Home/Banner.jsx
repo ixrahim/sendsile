@@ -1,25 +1,26 @@
 import React from "react";
 import { Hero } from "./helper";
-import { Button, Text } from "../Layout/helpers";
+import { Button, Text, Title } from "../Layout/helpers";
 import list_img from "../../assets/png/list.png";
+import list_img_mobile from "../../assets/png/mobile_banner.png";
 
-const Banner = () => {
+const Banner = ({ isMobile }) => {
   return (
     <div>
       <Hero className="container mx-auto">
         <div className="flex justify-center flex-col items-center">
-          <Text
-            $fontSize="72px"
-            $lineHeight="100px"
+          <Title
+            $fontSize={isMobile ? "40px" : "72px"}
+            $lineHeight={isMobile ? "52px" : "100px"}
             color="#00070C"
             $fontWeight="500"
-            className="mb-[16px]"
+            className="mb-[16px] text-center"
           >
             Bridging hearts across
-            <br />
+            {!isMobile && <br />}
             <Text
-              $fontSize="72px"
-              $lineHeight="100px"
+              $fontSize={isMobile ? "40px" : "72px"}
+              $lineHeight={isMobile ? "52px" : "100px"}
               $color="#FFA900"
               $fontWeight="300"
               className="mx-auto"
@@ -28,17 +29,17 @@ const Banner = () => {
               miles
               <span style={{ color: "#000" }}>.</span>
             </Text>
-          </Text>
+          </Title>
           <Text
             className="text-center mb-[24px]"
-            color="#36454F"
-            $fontSize="20px"
+            $color="#36454F"
             $fontWeight="400"
-            $lineHeight="24px"
+            $fontSize={isMobile ? "17px" : "20px"}
+            $lineHeight={isMobile ? "21.4px" : "24px"}
           >
             From doorstep deliveries to heartfelt services, Sendsile provides a
-            hub to <br /> support loved ones with food, health and personal care
-            services.
+            hub to {!isMobile && <br />} support loved ones with food, health
+            and personal care services.
           </Text>
           <div>
             <Button
@@ -46,6 +47,9 @@ const Banner = () => {
               className="bg-primary"
               $color="#fff"
               $maxW="100%"
+              $fontSize="15px"
+              $fontWeight="700"
+              $lineHeight="21px"
             >
               Get started
             </Button>
@@ -53,7 +57,7 @@ const Banner = () => {
         </div>
       </Hero>
       <div className="mt-[100px] mb-[130px]">
-        <img src={list_img} alt="" />
+        <img src={isMobile ? list_img_mobile : list_img} alt="" />
       </div>
     </div>
   );

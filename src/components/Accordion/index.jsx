@@ -16,7 +16,9 @@ const Accordion = ({ title, content }) => {
         }`}
         onClick={() => setIsActive(!isActive)}
       >
-        <div>{title}</div>
+        <div>
+          <h5 className="font-[500] text-[15px] leading-[24.2px]">{title}</h5>
+        </div>
         <div>{isActive ? "-" : "+"}</div>
       </div>
       {isActive && (

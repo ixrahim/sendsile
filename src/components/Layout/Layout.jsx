@@ -3,16 +3,20 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { Suspense } from "react";
 import "../Layout/layout.css";
+import useMediaQuery from "../../utils/hooks/useMedia";
+
 function Layout() {
+  const isMobile = useMediaQuery("(max-width: 600px)");
+
   return (
     <div className="main">
-      <Header />
+      <Header isMobile={isMobile} />
       <main>
         <Suspense fallback={<div>Loading...</div>}>
-          <Outlet />
+          <Outlet context={isMobile} />
         </Suspense>
       </main>
-      <Footer />
+      <Footer isMobile={isMobile} />
     </div>
   );
 }

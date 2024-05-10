@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import _ from "lodash";
+import { px2vw } from "../../utils/helpers";
 
 const Title = styled.h1`
   font-size: ${(props) => props.$fontSize || "32px"};
   font-weight: ${(props) => props.$fontWeight || "500"};
   line-height: ${(props) => props.$lineHeight || "38.4px"};
   color: ${(props) => props.$color || "#00070C"};
-  max-width: ${(props) => props.maxW || "100%"};
+  max-width: ${(props) => props.$maxW || "100%"};
 `;
 
 const Text = styled.p`
@@ -35,6 +36,9 @@ const Button = styled.button`
   border: ${(props) => props.$border || "1px solid #5f5f5f"};
   max-width: ${(props) => props.$maxW || "126px"};
   margin: ${(props) => props.$margin || "0px 0px"};
+  font-size: ${(props) => props.$fontSize || "18px"};
+  font-weight: ${(props) => props.$fontWeight || "500"};
+  line-height: ${(props) => props.$lineHeight || "30px"};
 `;
 const Navbar = styled.nav`
   height: 76px;
