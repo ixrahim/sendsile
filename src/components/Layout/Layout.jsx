@@ -6,7 +6,8 @@ import "../Layout/layout.css";
 import useMediaQuery from "../../utils/hooks/useMedia";
 
 function Layout() {
-  const isMobile = useMediaQuery("(max-width: 600px)");
+  const isMobile = useMediaQuery("(max-width: 425px)");
+  console.log(isMobile);
 
   return (
     <div className="main">

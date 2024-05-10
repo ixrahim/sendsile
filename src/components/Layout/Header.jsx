@@ -22,7 +22,7 @@ const Header = () => {
         <div className="login_container">
           <img src={logo} alt="a logo" className="logo" />
         </div>
-        <div className="sm:hidden md:flex">
+        <div className="xs:hidden md:flex">
           {navLinks.map((link, idx) => {
             return (
               <a
@@ -48,7 +48,7 @@ const Header = () => {
         <div>
           <img src={menu_icon} alt="" width="32px" />
         </div>
-        <div className="sm:hidden md:flex">
+        <div className="xs:hidden md:flex">
           <Button className="bg-primary">Login</Button>
         </div>
       </Navbar>

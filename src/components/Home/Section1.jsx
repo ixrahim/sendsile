@@ -6,7 +6,7 @@ const Section1 = ({ isMobile }) => {
   return (
     <div className="mb-[42px]">
       <div className="container mx-auto">
-        <div className="flex justify-between sm:flex-col md:flex-row items-start lg:items-center flex-row">
+        <div className="flex justify-between flex-col md:flex-row items-start lg:items-center">
           <div
             className={
               isMobile ? "flex items-center mb-[24px]" : "flex items-center"
