@@ -11,6 +11,9 @@ module.exports = {
         // text_placeholder: "#B9C0C5",
         // text_label: "#6F7C86",
       },
+      animation: {
+        blink: "blink 1s ease-in-out infinite",
+      },
       screens: {
         xs: "320px",
         sm: "425px",
@@ -21,6 +24,11 @@ module.exports = {
       },
       backgroundImage: {
         "card-bg": "url('assets/png/card_img3_bg.png')",
+      },
+      keyframes: {
+        blink: {
+          "0%, 100%": { transition: "height 200ms" },
+        },
       },
     },
   },

@@ -6,7 +6,7 @@ const Title = styled.h1`
   font-weight: ${(props) => props.$fontWeight || "500"};
   line-height: ${(props) => props.$lineHeight || "38.4px"};
   color: ${(props) => props.$color || "#00070C"};
-  max-width: ${(props) => props.$maxW || "100%"};
+  max-width: ${(props) => props.$maxW || "fit-content"};
 `;
 
 const Text = styled.p`
@@ -16,8 +16,8 @@ const Text = styled.p`
   color: ${(props) => props.$color || "#000"};
   width: ${(props) => props.$width || "fit-content"};
   text-decoration: ${(props) => (props.$underline ? "underline" : "")};
-  max-width: ${(props) => props.$maxW || "100%"};
-  cursor: ${(props) => props.$cursor || "none"};
+  max-width: ${(props) => props.$maxW || "fit-content"};
+  cursor: ${(props) => props.$cursor || "auto"};
   font-style: ${(props) => (props.$italic ? "italic" : "")};
 `;
 
@@ -33,7 +33,7 @@ const Button = styled.button`
   border-radius: ${(props) => props.$borderRadius || "32px"};
   color: ${(props) => props.$color || "#000"};
   border: ${(props) => props.$border || "1px solid #5f5f5f"};
-  max-width: ${(props) => props.$maxW || "126px"};
+  max-width: ${(props) => props.$maxW || "fit-content"};
   margin: ${(props) => props.$margin || "0px 0px"};
   font-size: ${(props) => props.$fontSize || "18px"};
   font-weight: ${(props) => props.$fontWeight || "500"};

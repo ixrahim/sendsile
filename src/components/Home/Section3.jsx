@@ -20,6 +20,7 @@ const Section3 = ({ isMobile }) => {
               $lineHeight={isMobile ? "21.8px" : "54.8px"}
               $fontWeight="500"
               className="text-center"
+              $maxW="100%"
             >
               Request . Pay . Delivery
             </Title>

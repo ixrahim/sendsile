@@ -18,11 +18,11 @@ const Header = () => {
   ];
   return (
     <div>
-      <Navbar className="container flex justify-between items-center">
+      <Navbar className="flex justify-between items-center fixed top-0 w-full bg-[#FFFCF7] z-10 xs:px-[16px] lg:px-[100px]">
         <div className="login_container">
           <img src={logo} alt="a logo" className="logo" />
         </div>
-        <div className="xs:hidden md:flex">
+        <div className="xs:hidden md:hidden lg:flex">
           {navLinks.map((link, idx) => {
             return (
               <a
@@ -45,10 +45,10 @@ const Header = () => {
             );
           })}
         </div>
-        <div>
+        <div className="lg:hidden">
           <img src={menu_icon} alt="" width="32px" />
         </div>
-        <div className="xs:hidden md:flex">
+        <div className="xs:hidden sm:hidden md:hidden lg:flex">
           <Button className="bg-primary">Login</Button>
         </div>
       </Navbar>

@@ -6,9 +6,13 @@ import card_img3 from "../../assets/png/card_img3.png";
 import bowl_icon from "../../assets/png/bowl_icon.png";
 import clock_icon from "../../assets/png/clock_icon.png";
 import snow_icon from "../../assets/png/snow_icon.png";
+import laundry from "../../assets/png/laundry.png";
+import laundry2 from "../../assets/png/mobile_offer_img1.png";
+import laundry3 from "../../assets/png/laundry3.png";
+import laundry4 from "../../assets/png/laundry4.png";
 
 const Hero = styled.div`
-  margin: 6.25rem auto;
+  padding-top: 200px;
 `;
 
 const accordionData = [
@@ -79,4 +83,31 @@ const carouselData = [
   },
 ];
 
-export { Hero, accordionData, offerList, carouselData };
+const section2data = [
+  {
+    index: 0,
+    title: "Quality laundry services",
+    content: `Impeccable laundry services to keep your loved ones fresh and comfortable.`,
+    ctaText: "Learn more",
+    cta: () => {},
+    image: laundry,
+  },
+  {
+    index: 1,
+    title: "Farm fresh delights",
+    content: `Impeccable laundry services to keep your loved ones fresh and comfortable.`,
+    ctaText: "Learn more",
+    cta: () => {},
+    image: laundry3,
+  },
+  {
+    index: 2,
+    title: "Healthcare plans",
+    content: `Impeccable laundry services to keep your loved ones fresh and comfortable.`,
+    ctaText: "Learn more",
+    cta: () => {},
+    image: laundry4,
+  },
+];
+
+export { Hero, accordionData, offerList, carouselData, section2data };
