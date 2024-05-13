@@ -49,44 +49,177 @@ const Footer = ({ isMobile }) => {
           <div
             className={isMobile ? "flex flex-col" : "grid grid-cols-6 py-12"}
           >
-            {isMobile ? (
-              <>
-                <div>
-                  <Title
-                    className="col-span-2 text-left mb-[24px] mt-[48px]"
-                    $color="#fff"
-                    $fontSize="24px"
-                    $lineHeight="31px"
-                    $fontWeight="700"
-                  >
-                    Ready when you are
-                  </Title>
-                </div>
-                <div className="mb-[24px]">
+            <div className="xs:block sm:block md:block lg:hidden">
+              <div>
+                <Title
+                  className="col-span-2 text-left mb-[24px] mt-[48px]"
+                  $color="#fff"
+                  $fontSize="24px"
+                  $lineHeight="31px"
+                  $fontWeight="700"
+                >
+                  Ready when you are
+                </Title>
+              </div>
+              <div className="mb-[24px]">
+                <Text
+                  $color="#fff"
+                  $fontSize="15px"
+                  $lineHeight="21px"
+                  $fontWeight="500"
+                >
+                  Take care of your family, anywhere you are in the world.
+                  Experience the peace that comes with ensuring your loved ones
+                  are well catered for with Sendsile.
+                </Text>
+              </div>
+              <div className="mb-[24px]">
+                <Button
+                  $borderRadius="32px"
+                  $background="#202426"
+                  $border="1px solid #74767E"
+                  $maxW="fit-content"
+                  $color="#fff"
+                >
+                  Try Sendsile today
+                </Button>
+              </div>
+              <div className="grid grid-cols-2 text-white">
+                <div className="col-span-1 mb-[40px]">
                   <Text
                     $color="#fff"
                     $fontSize="15px"
                     $lineHeight="21px"
                     $fontWeight="500"
                   >
-                    Take care of your family, anywhere you are in the world.
-                    Experience the peace that comes with ensuring your loved
-                    ones are well catered for with Sendsile.
+                    Company
+                  </Text>
+                  <div>
+                    {companyLinks.map((link) => {
+                      return (
+                        <a href={link.path} className="flex my-4" key={link.id}>
+                          <span className="text-base items-center font-medium gap-1 text-white cursor-pointer">
+                            {link.name}
+                          </span>
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+                <div className="col-span-1">
+                  <Text
+                    $color="#fff"
+                    $fontSize="15px"
+                    $lineHeight="21px"
+                    $fontWeight="500"
+                  >
+                    Explore
+                  </Text>
+
+                  {exploreLinks.map((link) => {
+                    return (
+                      <a href={link.path} className="flex my-4" key={link.id}>
+                        <span className="text-base items-center font-medium gap-1 text-white cursor-pointer">
+                          {link.name}
+                        </span>
+                      </a>
+                    );
+                  })}
+                </div>
+                <div className="col-span-1">
+                  <Text
+                    $color="#fff"
+                    $fontSize="15px"
+                    $lineHeight="21px"
+                    $fontWeight="500"
+                  >
+                    Contact us
+                  </Text>
+                  {contactLinks.map((link) => {
+                    return (
+                      <a href={link.path} className="flex my-4" key={link.id}>
+                        <span className="text-base items-center font-medium gap-1 text-white cursor-pointer">
+                          {link.name}
+                        </span>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="flex items-center mt-[55px]">
+                <div className="mr-[36px]">
+                  <Image
+                    src={isMobile ? footer_img3 : footer_img1}
+                    alt=""
+                    width="40px"
+                    height="40px"
+                  />
+                </div>
+                <div>
+                  <Text $color="#fff">
+                    Lorem ipsum dolor sit amet consectetur. Sociis tincidunt
+                    blandit sed feugiat ornare dictum cras. Adipiscing sit
+                    pellentesque <br /> vehicula a viverra nullam risus. Congue
+                    elit tincidunt id arcu nec mi massa. © Sendsile 2024. All
+                    Rights Reserved.
                   </Text>
                 </div>
-                <div className="mb-[24px]">
-                  <Button
-                    $borderRadius="32px"
-                    $background="#202426"
-                    $border="1px solid #74767E"
-                    $maxW="fit-content"
-                    $color="#fff"
-                  >
-                    Try Sendsile today
-                  </Button>
+              </div>
+              <div className="pt-[24px]">
+                <div className="flex py-[24px] px-[27px] bg-[#131618] border border-solid border-[#282C31] rounded-[10px] w-fit">
+                  <span className="pr-[16px]">
+                    <BsInstagram />
+                  </span>
+                  <span className="pr-[16px]">
+                    <FaFacebookF />
+                  </span>
+                  <span className="pr-[16px]">
+                    <BsTwitterX />
+                  </span>
+                  <span>
+                    <BsLinkedin />
+                  </span>
                 </div>
-                <div className="grid grid-cols-2 text-white">
-                  <div className="col-span-1 mb-[40px]">
+              </div>
+            </div>
+
+            <div className="xs:hidden sm:hidden md:hidden lg:block">
+              <div className="col-span-2">
+                <Title
+                  className="col-span-2 text-left mb-5"
+                  $color="#fff"
+                  $fontSize="36px"
+                  $lineHeight="48px"
+                  $fontWeight="700"
+                >
+                  Ready when <br /> you are
+                </Title>
+                <Text
+                  $color="#fff"
+                  $fontSize="15px"
+                  $lineHeight="21px"
+                  $fontWeight="500"
+                  className="col-span-2 text-left mb-4"
+                  $maxW="335px"
+                >
+                  Take care of your family, anywhere you are in the world.
+                  Experience the peace that comes with ensuring your loved ones
+                  are well catered for with Sendsile.
+                </Text>
+                <Button
+                  $borderRadius="32px"
+                  $background="#202426"
+                  $border="1px solid #74767E"
+                  $maxW="fit-content"
+                  $color="#fff"
+                >
+                  Try Sendsile today
+                </Button>
+              </div>
+              <div></div>
+              <div className="col-span-3">
+                <div className="grid grid-cols-3 text-white">
+                  <div className="col-span-1">
                     <Text
                       $color="#fff"
                       $fontSize="15px"
@@ -151,155 +284,8 @@ const Footer = ({ isMobile }) => {
                     })}
                   </div>
                 </div>
-                <div className="flex items-center mt-[55px]">
-                  <div className="mr-[36px]">
-                    <Image
-                      src={isMobile ? footer_img3 : footer_img1}
-                      alt=""
-                      width="40px"
-                      height="40px"
-                    />
-                  </div>
-                  <div>
-                    <Text $color="#fff">
-                      Lorem ipsum dolor sit amet consectetur. Sociis tincidunt
-                      blandit sed feugiat ornare dictum cras. Adipiscing sit
-                      pellentesque <br /> vehicula a viverra nullam risus.
-                      Congue elit tincidunt id arcu nec mi massa. © Sendsile
-                      2024. All Rights Reserved.
-                    </Text>
-                  </div>
-                </div>
-                <div className="pt-[24px]">
-                  <div className="flex py-[24px] px-[27px] bg-[#131618] border border-solid border-[#282C31] rounded-[10px] w-fit">
-                    <span className="pr-[16px]">
-                      <BsInstagram />
-                    </span>
-                    <span className="pr-[16px]">
-                      <FaFacebookF />
-                    </span>
-                    <span className="pr-[16px]">
-                      <BsTwitterX />
-                    </span>
-                    <span>
-                      <BsLinkedin />
-                    </span>
-                  </div>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="col-span-2">
-                  <Title
-                    className="col-span-2 text-left mb-5"
-                    $color="#fff"
-                    $fontSize="36px"
-                    $lineHeight="48px"
-                    $fontWeight="700"
-                  >
-                    Ready when <br /> you are
-                  </Title>
-                  <Text
-                    $color="#fff"
-                    $fontSize="15px"
-                    $lineHeight="21px"
-                    $fontWeight="500"
-                    className="col-span-2 text-left mb-4"
-                    $maxW="335px"
-                  >
-                    Take care of your family, anywhere you are in the world.
-                    Experience the peace that comes with ensuring your loved
-                    ones are well catered for with Sendsile.
-                  </Text>
-                  <Button
-                    $borderRadius="32px"
-                    $background="#202426"
-                    $border="1px solid #74767E"
-                    $maxW="fit-content"
-                    $color="#fff"
-                  >
-                    Try Sendsile today
-                  </Button>
-                </div>
-                <div></div>
-                <div className="col-span-3">
-                  <div className="grid grid-cols-3 text-white">
-                    <div className="col-span-1">
-                      <Text
-                        $color="#fff"
-                        $fontSize="15px"
-                        $lineHeight="21px"
-                        $fontWeight="500"
-                      >
-                        Company
-                      </Text>
-                      <div>
-                        {companyLinks.map((link) => {
-                          return (
-                            <a
-                              href={link.path}
-                              className="flex my-4"
-                              key={link.id}
-                            >
-                              <span className="text-base items-center font-medium gap-1 text-white cursor-pointer">
-                                {link.name}
-                              </span>
-                            </a>
-                          );
-                        })}
-                      </div>
-                    </div>
-                    <div className="col-span-1">
-                      <Text
-                        $color="#fff"
-                        $fontSize="15px"
-                        $lineHeight="21px"
-                        $fontWeight="500"
-                      >
-                        Explore
-                      </Text>
-
-                      {exploreLinks.map((link) => {
-                        return (
-                          <a
-                            href={link.path}
-                            className="flex my-4"
-                            key={link.id}
-                          >
-                            <span className="text-base items-center font-medium gap-1 text-white cursor-pointer">
-                              {link.name}
-                            </span>
-                          </a>
-                        );
-                      })}
-                    </div>
-                    <div className="col-span-1">
-                      <Text
-                        $color="#fff"
-                        $fontSize="15px"
-                        $lineHeight="21px"
-                        $fontWeight="500"
-                      >
-                        Contact us
-                      </Text>
-                      {contactLinks.map((link) => {
-                        return (
-                          <a
-                            href={link.path}
-                            className="flex my-4"
-                            key={link.id}
-                          >
-                            <span className="text-base items-center font-medium gap-1 text-white cursor-pointer">
-                              {link.name}
-                            </span>
-                          </a>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-              </>
-            )}
+              </div>
+            </div>
           </div>
           {/* <div className="flex py-12 justify-between">
             <div className="flex items-center">
