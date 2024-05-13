@@ -2,9 +2,9 @@ import styled from "styled-components";
 import _ from "lodash";
 
 const Title = styled.h1`
-  font-size: ${(props) => props.$fontSize || "32px"};
+  font-size: ${(props) => props.$fontSize || ""};
   font-weight: ${(props) => props.$fontWeight || "500"};
-  line-height: ${(props) => props.$lineHeight || "38.4px"};
+  line-height: ${(props) => props.$lineHeight || ""};
   color: ${(props) => props.$color || "#00070C"};
   max-width: ${(props) => props.$maxW || "fit-content"};
 `;

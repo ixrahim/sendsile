@@ -31,9 +31,7 @@ const Footer = ({ isMobile }) => {
           <div className="max-w-[554px] mx-auto mb-7">
             <Title
               $color="#fff"
-              className="text-center"
-              $fontSize={isMobile ? "24px" : "40px"}
-              $lineHeight={isMobile ? "28px" : "48px"}
+              className="text-center xs:text-[24px] sm:text-[24px] md:text-[24px] lg:text-[40px] xs:leading-[28px] md:leading-[28px] lg:leading-[48px]"
               $fontWeight="700"
             >
               Unlock the convenience of catering to loved ones
@@ -41,13 +39,20 @@ const Footer = ({ isMobile }) => {
           </div>
           <div className="flex flex-row justify-center mb-12">
             <img
-              src={isMobile ? store_mobile : storesImg}
+              src={store_mobile}
               alt="stores available"
-              width={isMobile && "138px"}
+              className="xs:block xs:w-[138px] sm:block sm:w-[138px] md:block md:w-[138px] lg:hidden"
+            />
+            <img
+              src={storesImg}
+              alt="stores available"
+              className="xs:hidden sm:hidden md:hidden lg:block"
             />
           </div>
           <div
-            className={isMobile ? "flex flex-col" : "grid grid-cols-6 py-12"}
+            className={
+              "xs:flex sm:flex md:flex lg:grid xs:flex-col sm:flex-col md:flex-col lg:grid-cols-6 lg:py-12"
+            }
           >
             <div className="xs:block sm:block md:block lg:hidden">
               <div>
@@ -287,43 +292,6 @@ const Footer = ({ isMobile }) => {
               </div>
             </div>
           </div>
-          {/* <div className="flex py-12 justify-between">
-            <div className="flex items-center">
-              <div className="mr-[36px]">
-                <Image
-                  src={isMobile ? footer_img3 : footer_img1}
-                  alt=""
-                  width="40px"
-                  height="40px"
-                />
-              </div>
-              <div>
-                <Text $color="#fff" $maxW="820px">
-                  Lorem ipsum dolor sit amet consectetur. Sociis tincidunt
-                  blandit sed feugiat ornare dictum cras. Adipiscing sit
-                  pellentesque <br /> vehicula a viverra nullam risus. Congue
-                  elit tincidunt id arcu nec mi massa. © Sendsile 2024. All
-                  Rights Reserved.
-                </Text>
-              </div>
-            </div>
-            <div className="flex justify-center align-middle">
-              <div className="flex py-[24px] px-[27px] bg-[#131618] border border-solid border-[#282C31] rounded-[10px]">
-                <span className="pr-[16px]">
-                  <BsInstagram />
-                </span>
-                <span className="pr-[16px]">
-                  <FaFacebookF />
-                </span>
-                <span className="pr-[16px]">
-                  <BsTwitterX />
-                </span>
-                <span>
-                  <BsLinkedin />
-                </span>
-              </div>
-            </div>
-          </div> */}
         </div>
       </FooterContainer>
       <div className="mt-[35px]">
