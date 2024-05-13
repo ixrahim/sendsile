@@ -6,10 +6,10 @@ const Section1 = ({ isMobile }) => {
   return (
     <div className="mb-[42px]">
       <div className="container mx-auto">
-        <div className="flex justify-between flex-col md:flex-row items-start lg:items-center">
+        <div className="flex justify-between flex-col md:flex-col items-start lg:items-center lg:flex-row">
           <div
             className={
-              isMobile ? "flex items-center mb-[24px]" : "flex items-center"
+              "flex items-center xs:mb-[24px] sm:mb-[24px] md:mb-[24px]"
             }
           >
             <Text
@@ -22,7 +22,12 @@ const Section1 = ({ isMobile }) => {
               Sendsile has {!isMobile && <br />} you covered
             </Text>
             <div>
-              <img src={lotus} alt="" width={isMobile ? "41.7px" : "98px"} />
+              <img
+                src={lotus}
+                alt=""
+                // width={isMobile ? "41.7px" : ""}
+                className="xs:w-[41.7px] sm:w-[41.7px] md:w-[41.7px] lg:w-[98px]"
+              />
             </div>
           </div>
 
