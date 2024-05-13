@@ -7,7 +7,6 @@ import bowl_icon from "../../assets/png/bowl_icon.png";
 import clock_icon from "../../assets/png/clock_icon.png";
 import snow_icon from "../../assets/png/snow_icon.png";
 import laundry from "../../assets/png/laundry.png";
-import laundry2 from "../../assets/png/mobile_offer_img1.png";
 import laundry3 from "../../assets/png/laundry3.png";
 import laundry4 from "../../assets/png/laundry4.png";
 

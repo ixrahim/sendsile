@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Text, Title } from "../Layout/helpers";
 import { FaArrowRight } from "react-icons/fa";
-import laundry from "../../assets/png/laundry.png";
+
 import laundry2 from "../../assets/png/mobile_offer_img1.png";
 import { offerList, section2data } from "./helper";
 
