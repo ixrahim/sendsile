@@ -35,8 +35,8 @@ const Banner = () => {
             $fontWeight="400"
           >
             From doorstep deliveries to heartfelt services, Sendsile provides a
-            hub to <br className="sm:hidden lg:block" /> support loved ones with
-            food, health and personal care services.
+            hub to <br className="xs:hidden sm:hidden lg:block" /> support loved
+            ones with food, health and personal care services.
           </Text>
           <div>
             <Button

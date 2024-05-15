@@ -37,9 +37,10 @@ const Section1 = ({ isMobile }) => {
               $fontWeight="400"
               className="xs:text-[15px] xs:leading-[21px] sm:text-[15px] sm:leading-[21px] lg:text-[24px] lg:leading-[33.6px]"
             >
-              In a world where distance separates hearts, we provide <br />{" "}
-              fresh farm foods, meal plans and personalized care services{" "}
-              {!isMobile && <br />}
+              In a world where distance separates hearts, we provide{" "}
+              <br className="xs:hidden sm:hidden lg:block" /> fresh farm foods,
+              meal plans and personalized care services{" "}
+              <br className="xs:hidden sm:hidden lg:block" />
               for your loved ones.
             </Text>
           </div>

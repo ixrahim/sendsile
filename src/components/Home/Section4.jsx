@@ -18,7 +18,8 @@ const Section4 = ({ isMobile }) => {
                 className="xs:text-[24px] xs:leading-[28.8px] xs:mb-[16px] sm:text-[24px] sm:leading-[28.8px] sm:mb-[16px] lg:text-[44px] lg:leading-[52.8px] "
               >
                 Some of the <br className="xs:hidden sm:hidden lg:block" />
-                things you may <br /> want to know
+                things you may <br className="xs:hidden sm:hidden lg:block" />{" "}
+                want to know
               </Title>
 
               <img
@@ -36,7 +37,8 @@ const Section4 = ({ isMobile }) => {
                 $fontWeight="500"
                 $color="#36454F"
               >
-                Explore answers without the need to pose <br /> the questions.
+                Explore answers without the need to pose{" "}
+                <br className="xs:hidden sm:hidden lg:block" /> the questions.
               </Text>
             </div>
           </div>
