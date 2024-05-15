@@ -1,7 +1,10 @@
 import React from "react";
 import { Hero } from "./helper";
 import { Button, Text, Title } from "../Layout/helpers";
-import list_img from "../../assets/png/list_min.png";
+import list1 from "../../assets/png/list1.png";
+import list2 from "../../assets/png/list2.png";
+import list3 from "../../assets/png/list3.png";
+import list4 from "../../assets/png/list4.png";
 import Marquee from "react-fast-marquee";
 
 const Banner = () => {
@@ -52,9 +55,24 @@ const Banner = () => {
 
       <Marquee className="mt-[100px] mb-[130px] flex">
         <img
-          src={list_img}
+          src={list1}
           alt=""
-          className="inline xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[1000px]"
+          className="inline xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
+        />
+        <img
+          src={list2}
+          alt=""
+          className="inline xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
+        />
+        <img
+          src={list3}
+          alt=""
+          className="inline xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
+        />
+        <img
+          src={list4}
+          alt=""
+          className="inline xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
         />
       </Marquee>
     </div>
