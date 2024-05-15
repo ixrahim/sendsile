@@ -12,13 +12,9 @@ const Section2 = ({ isMobile }) => {
     if (id === current) {
       return;
     } else {
-      setCurrent(Number(id));
+      return setCurrent(Number(id));
     }
-
-    console.log(current);
-    return;
   };
-  console.log(section2data[current].image);
   return (
     <div>
       <div className="container mx-auto py-[107px]">
@@ -31,7 +27,7 @@ const Section2 = ({ isMobile }) => {
           >
             WHAT WE OFFER
           </Text>
-          <hr style={{ width: isMobile ? "56%" : "87%" }} />
+          <hr className="xs:w-[56%] sm:w-[57%] md:w-[58%] lg:w-[87%]" />
         </div>
 
         <div className="xs:block sm:block md:block lg:hidden">
@@ -48,26 +44,18 @@ const Section2 = ({ isMobile }) => {
                     className="rounded-t-[16px]"
                   />
                 </div>
-                <div
-                  className={
-                    isMobile
-                      ? "bg-[#FEF5EA] py-[20px] px-[20px] rounded-b-[16px]"
-                      : "bg-[#FEF5EA] py-[20px] px-[20px] rounded-[16px]"
-                  }
-                >
+                <div className="bg-[#FEF5EA] py-[20px] px-[20px] xs:rounded-b-[16px] sm:rounded-b-[16px] lg:rounded-[16px]">
                   <Title
                     $fontWeight="500"
-                    $fontSize="22px"
-                    $lineHeight="30.8px"
+                    className="xs:text-[17px] xs:leading-[21px] sm:text-[17px] md:text-[17px] lg:text-[22px] lg:leading-[30.8px]"
                   >
                     {item.title}
                   </Title>
                   <div className="pt-[8px] pb-[24px]">
                     <Text
-                      $fontSize="17px"
-                      $lineHeight="23.8px"
                       $fontWeight="400"
                       $color="#536878"
+                      className="xs:text-[15px] xs:leading-[21px] sm:text-[15px] md:text-[15px] lg:text-[17px] lg:leading-[23.8px]"
                     >
                       {item.content}
                     </Text>
@@ -103,8 +91,8 @@ const Section2 = ({ isMobile }) => {
                   <div
                     className={
                       current === idx
-                        ? "bg-[#FEF5EA] py-[20px] px-[20px] rounded-[16px] max-w-[430px] mb-[40px] transition ease-in-out delay-200"
-                        : "pt-[8px] mb-[40px] px-[20px] max-w-[430px] transition ease-in-out delay-200"
+                        ? "bg-[#FEF5EA] py-[20px] px-[20px] rounded-[16px] max-w-[430px] mb-[40px] transition ease-in-out delay-150 cursor-pointer"
+                        : "pt-[8px] mb-[40px] px-[20px] max-w-[430px] transition ease-in-out delay-150 cursor-pointer"
                     }
                     onClick={(e) => handleToggle(e)}
                     id={idx}

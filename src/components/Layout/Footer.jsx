@@ -2,7 +2,6 @@ import React from "react";
 import storesImg from "../../assets/svg/stores.svg";
 import store_mobile from "../../assets/png/store_mobile.png";
 import footer_img1 from "../../assets/png/footer_heart.png";
-import footer_img3 from "../../assets/png/footer_mobile.png";
 import footer_img2 from "../../assets/png/footer-img2.png";
 import {
   Text,
@@ -14,7 +13,6 @@ import {
   contactLinks,
 } from "./helpers";
 import styled from "styled-components";
-
 import { FaFacebookF } from "react-icons/fa6";
 import { BsTwitterX, BsInstagram, BsLinkedin } from "react-icons/bs";
 
@@ -23,7 +21,7 @@ const Image = styled.img`
   height: 54px;
 `;
 
-const Footer = ({ isMobile }) => {
+const Footer = () => {
   return (
     <div className="bg-[#191c1f]">
       <FooterContainer>
@@ -41,17 +39,17 @@ const Footer = ({ isMobile }) => {
             <img
               src={store_mobile}
               alt="stores available"
-              className="xs:block xs:w-[138px] sm:block sm:w-[138px] md:block md:w-[138px] lg:hidden"
+              className="xs:block xs:w-[138px] sm:block sm:w-[138px] md:block md:w-[138px] lg:hidden cursor-pointer"
             />
             <img
               src={storesImg}
               alt="stores available"
-              className="xs:hidden sm:hidden md:hidden lg:block"
+              className="xs:hidden sm:hidden md:hidden lg:block cursor-pointer"
             />
           </div>
           <div
             className={
-              "xs:flex sm:flex md:flex lg:grid xs:flex-col sm:flex-col md:flex-col lg:grid-cols-6 lg:py-12"
+              "xs:flex sm:flex md:flex lg:grid xs:flex-col sm:flex-col md:flex-col lg:py-12"
             }
           >
             <div className="xs:block sm:block md:block lg:hidden">
@@ -154,10 +152,16 @@ const Footer = ({ isMobile }) => {
               <div className="flex items-center mt-[55px]">
                 <div className="mr-[36px]">
                   <Image
-                    src={isMobile ? footer_img3 : footer_img1}
+                    src={footer_img1}
+                    alt=""
+                    className="xs:block sm:block md:hidden lg:hidden w-[40px]"
+                  />
+                  <Image
+                    src={footer_img1}
                     alt=""
                     width="40px"
                     height="40px"
+                    className="xs:hidden sm:hidden md:block lg:block"
                   />
                 </div>
                 <div>
@@ -188,7 +192,7 @@ const Footer = ({ isMobile }) => {
               </div>
             </div>
 
-            <div className="xs:hidden sm:hidden md:hidden lg:block">
+            <div className="xs:hidden sm:hidden md:hidden lg:grid lg:grid-cols-6">
               <div className="col-span-2">
                 <Title
                   className="col-span-2 text-left mb-5"
@@ -229,7 +233,7 @@ const Footer = ({ isMobile }) => {
                       $color="#fff"
                       $fontSize="15px"
                       $lineHeight="21px"
-                      $fontWeight="500"
+                      $fontWeight="700"
                     >
                       Company
                     </Text>
@@ -241,7 +245,7 @@ const Footer = ({ isMobile }) => {
                             className="flex my-4"
                             key={link.id}
                           >
-                            <span className="text-base items-center font-medium gap-1 text-white cursor-pointer">
+                            <span className="text-[15px] leading-[21px] items-center font-[400] gap-1 text-[#E5E9EE] cursor-pointer">
                               {link.name}
                             </span>
                           </a>
@@ -254,7 +258,7 @@ const Footer = ({ isMobile }) => {
                       $color="#fff"
                       $fontSize="15px"
                       $lineHeight="21px"
-                      $fontWeight="500"
+                      $fontWeight="700"
                     >
                       Explore
                     </Text>
@@ -262,7 +266,7 @@ const Footer = ({ isMobile }) => {
                     {exploreLinks.map((link) => {
                       return (
                         <a href={link.path} className="flex my-4" key={link.id}>
-                          <span className="text-base items-center font-medium gap-1 text-white cursor-pointer">
+                          <span className="text-[15px] leading-[21px] items-center font-[400] gap-1 text-[#E5E9EE] cursor-pointer">
                             {link.name}
                           </span>
                         </a>
@@ -274,14 +278,14 @@ const Footer = ({ isMobile }) => {
                       $color="#fff"
                       $fontSize="15px"
                       $lineHeight="21px"
-                      $fontWeight="500"
+                      $fontWeight="700"
                     >
                       Contact us
                     </Text>
                     {contactLinks.map((link) => {
                       return (
                         <a href={link.path} className="flex my-4" key={link.id}>
-                          <span className="text-base items-center font-medium gap-1 text-white cursor-pointer">
+                          <span className="text-[15px] leading-[21px] items-center font-[400] gap-1 text-[#E5E9EE] cursor-pointer">
                             {link.name}
                           </span>
                         </a>

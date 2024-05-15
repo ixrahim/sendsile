@@ -69,16 +69,19 @@ const carouselData = [
     image: card_img1,
     title: "Nourish your loved ones with the diversity they crave.",
     icon: bowl_icon,
+    background: "#F7F7F7",
   },
   {
     image: card_img2,
     title: "Diverse cross border payment options.",
     icon: snow_icon,
+    background: "#000000",
   },
   {
     image: card_img3,
     title: "Swift service delivery to your loved ones.",
     icon: clock_icon,
+    background: "#F7F7F7",
   },
 ];
 

@@ -10,9 +10,9 @@ const Title = styled.h1`
 `;
 
 const Text = styled.p`
-  font-size: ${(props) => props.$fontSize || "14px"};
+  font-size: ${(props) => props.$fontSize || ""};
   font-weight: ${(props) => props.$fontWeight || "400"};
-  line-height: ${(props) => props.$lineHeight || "16px"};
+  line-height: ${(props) => props.$lineHeight || ""};
   color: ${(props) => props.$color || "#000"};
   width: ${(props) => props.$width || "fit-content"};
   text-decoration: ${(props) => (props.$underline ? "underline" : "")};

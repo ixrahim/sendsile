@@ -1,29 +1,24 @@
 import React from "react";
 import { Hero } from "./helper";
 import { Button, Text, Title } from "../Layout/helpers";
-import list_img from "../../assets/png/list.png";
-import list_img_mobile from "../../assets/png/mobile_banner.png";
+import list_img from "../../assets/png/list_min.png";
+import Marquee from "react-fast-marquee";
 
-const Banner = ({ isMobile }) => {
+const Banner = () => {
   return (
     <div>
-      <Hero className="container mx-auto">
+      <Hero className="container mx-auto backdrop-blur-sm">
         <div className="flex justify-center flex-col items-center">
           <Title
-            $fontSize={isMobile ? "40px" : "72px"}
-            $lineHeight={isMobile ? "52px" : "100px"}
             color="#00070C"
             $fontWeight="500"
-            className="mb-[16px] text-center"
+            className="mb-[16px] text-center xs:text-[40px] xs:leading-[52px] sm:text-[40px] sm:leading-[52px] lg:text-[72px] lg:leading-[100px] "
           >
-            Bridging hearts across
-            {!isMobile && <br />}
+            Bridging hearts across <br className="sm:hidden lg:block" />
             <Text
-              $fontSize={isMobile ? "40px" : "72px"}
-              $lineHeight={isMobile ? "52px" : "100px"}
               $color="#FFA900"
               $fontWeight="300"
-              className="mx-auto"
+              className="mb-[16px] text-center xs:text-[40px] xs:leading-[52px] sm:text-[40px] sm:leading-[52px] lg:text-[72px] lg:leading-[100px] mx-auto xs:inline sm:inline lg:inline"
               $italic
             >
               miles
@@ -31,15 +26,13 @@ const Banner = ({ isMobile }) => {
             </Text>
           </Title>
           <Text
-            className="text-center mb-[24px]"
+            className="text-center mb-[24px] xs:text-[17px] xs:leading-[21.4px] sm:text-[17px] sm:leading-[21.4px] lg:text-[20px] lg:leading-[24px]"
             $color="#36454F"
             $fontWeight="400"
-            $fontSize={isMobile ? "17px" : "20px"}
-            $lineHeight={isMobile ? "21.4px" : "24px"}
           >
             From doorstep deliveries to heartfelt services, Sendsile provides a
-            hub to {!isMobile && <br />} support loved ones with food, health
-            and personal care services.
+            hub to <br className="sm:hidden lg:block" /> support loved ones with
+            food, health and personal care services.
           </Text>
           <div>
             <Button
@@ -56,9 +49,14 @@ const Banner = ({ isMobile }) => {
           </div>
         </div>
       </Hero>
-      <div className="mt-[100px] mb-[130px]">
-        <img src={isMobile ? list_img_mobile : list_img} alt="" />
-      </div>
+
+      <Marquee className="mt-[100px] mb-[130px] flex">
+        <img
+          src={list_img}
+          alt=""
+          className="inline xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[1000px]"
+        />
+      </Marquee>
     </div>
   );
 };

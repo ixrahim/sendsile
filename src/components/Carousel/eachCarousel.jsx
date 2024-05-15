@@ -5,7 +5,9 @@ const EachCarousel = ({ item, isNews }) => {
   return (
     <div>
       <div>
-        <div className="flex flex-col justify-between bg-[#F7F7F7] py-[32px] px-[20px] rounded-[18px] max-h-[398px] h-[100%]">
+        <div
+          className={`flex flex-col justify-between bg-[${item.background}] py-[32px] px-[20px] rounded-[18px] max-h-[398px] h-[100%]`}
+        >
           <div>
             <div className="mb-[16px]">
               <img src={item.icon} alt="" width="24px" />

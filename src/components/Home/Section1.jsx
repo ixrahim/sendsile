@@ -13,13 +13,13 @@ const Section1 = ({ isMobile }) => {
             }
           >
             <Text
-              $fontSize={isMobile ? "24px" : "52px"}
-              $lineHeight={isMobile ? "28.4px" : "62.4px"}
-              color="#00070C"
+              $color="#00070C"
               $fontWeight="500"
-              className="xs:mr-6 lg:mr-6"
+              className="xs:mr-6 xs:text-[24px] xs:leading-[28.4px] sm:text-[24px] md:text-[24px] lg:text-[52px] lg:leading-[62.4px] lg:mr-6"
             >
-              Sendsile has {!isMobile && <br />} you covered
+              Sendsile has{" "}
+              <br className="xs:hidden sm:hidden md:hidden lg:block" /> you
+              covered
             </Text>
             <div>
               <img
@@ -33,11 +33,9 @@ const Section1 = ({ isMobile }) => {
 
           <div>
             <Text
-              $fontSize={isMobile ? "15px" : "24px"}
-              $lineHeight={isMobile ? "21.7px" : "33.6px"}
-              color="#00070C"
+              $color="#00070C"
               $fontWeight="400"
-              className=""
+              className="xs:text-[15px] xs:leading-[21px] sm:text-[15px] sm:leading-[21px] lg:text-[24px] lg:leading-[33.6px]"
             >
               In a world where distance separates hearts, we provide <br />{" "}
               fresh farm foods, meal plans and personalized care services{" "}
