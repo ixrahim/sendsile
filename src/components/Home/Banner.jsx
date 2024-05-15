@@ -5,7 +5,7 @@ import list1 from "../../assets/png/list1.png";
 import list2 from "../../assets/png/list2.png";
 import list3 from "../../assets/png/list3.png";
 import list4 from "../../assets/png/list4.png";
-import Marquee from "react-fast-marquee";
+import "./style.css";
 
 const Banner = () => {
   return (
@@ -53,29 +53,54 @@ const Banner = () => {
           </div>
         </div>
       </Hero>
-
-      <Marquee className="mt-[100px] mb-[130px] flex">
-        <img
-          src={list1}
-          alt=""
-          className="inline xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
-        />
-        <img
-          src={list2}
-          alt=""
-          className="inline xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
-        />
-        <img
-          src={list3}
-          alt=""
-          className="inline xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
-        />
-        <img
-          src={list4}
-          alt=""
-          className="inline xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
-        />
-      </Marquee>
+      <div className="w-full overflow-hidden mt-[100px] mb-[130px]">
+        <div className="flex w-fit gap-[18px] justify-center">
+          <div className="flex w-max flex-nowrap custom_marquee">
+            <img
+              src={list1}
+              alt=""
+              className=" xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
+            />
+            <img
+              src={list2}
+              alt=""
+              className=" xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
+            />
+            <img
+              src={list3}
+              alt=""
+              className=" xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
+            />
+            <img
+              src={list4}
+              alt=""
+              className=" xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] "
+            />
+          </div>
+          <div className="flex w-max flex-nowrap custom_marquee">
+            <img
+              src={list1}
+              alt=""
+              className=" xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
+            />
+            <img
+              src={list2}
+              alt=""
+              className=" xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
+            />
+            <img
+              src={list3}
+              alt=""
+              className=" xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] mr-4"
+            />
+            <img
+              src={list4}
+              alt=""
+              className=" xs:max-h-[300px] sm:max-h-[300px] md:max-h-[300px] lg:max-h-[500px] "
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

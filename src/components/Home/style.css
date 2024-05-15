@@ -1,0 +1,15 @@
+@keyframes slider {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+}
+
+.custom_marquee {
+  animation: slider linear infinite;
+  -webkit-animation: slider linear infinite;
+  animation-duration: 100s;
+}
