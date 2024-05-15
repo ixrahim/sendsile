@@ -17,7 +17,8 @@ const Banner = () => {
             $fontWeight="500"
             className="mb-[16px] text-center xs:text-[40px] xs:leading-[52px] sm:text-[40px] sm:leading-[52px] lg:text-[72px] lg:leading-[100px] "
           >
-            Bridging hearts across <br className="sm:hidden lg:block" />
+            Bridging hearts across{" "}
+            <br className="xs:hidden sm:hidden lg:block" />
             <Text
               $color="#FFA900"
               $fontWeight="300"
