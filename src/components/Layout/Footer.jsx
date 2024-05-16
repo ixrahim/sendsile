@@ -154,14 +154,16 @@ const Footer = () => {
                   <Image
                     src={footer_img1}
                     alt=""
-                    className="xs:block sm:block md:hidden lg:hidden w-[40px]"
+                    width="40px"
+                    height="40px"
+                    className="xs:block sm:block md:hidden lg:hidden w-[40px] object-contain"
                   />
                   <Image
                     src={footer_img1}
                     alt=""
                     width="40px"
                     height="40px"
-                    className="xs:hidden sm:hidden md:block lg:block"
+                    className="xs:hidden sm:hidden md:block lg:block object-contain"
                   />
                 </div>
                 <div>
@@ -292,6 +294,51 @@ const Footer = () => {
                       );
                     })}
                   </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center flex-row mt-[55px] xs:hidden sm:hidden md:hidden lg:flex justify-between">
+              <div className="flex items-center flex-row">
+                <div className="mr-[36px]">
+                  <Image
+                    src={footer_img1}
+                    alt=""
+                    width="40px"
+                    height="40px"
+                    className="xs:block sm:block md:hidden lg:hidden w-[40px] object-contain"
+                  />
+                  <Image
+                    src={footer_img1}
+                    alt=""
+                    width="40px"
+                    height="40px"
+                    className="xs:hidden sm:hidden md:block lg:block object-contain"
+                  />
+                </div>
+                <div>
+                  <Text $color="#fff">
+                    Lorem ipsum dolor sit amet consectetur. Sociis tincidunt
+                    blandit sed feugiat ornare dictum cras. Adipiscing sit
+                    pellentesque <br /> vehicula a viverra nullam risus. Congue
+                    elit tincidunt id arcu nec mi massa. © Sendsile 2024. All
+                    Rights Reserved.
+                  </Text>
+                </div>
+              </div>
+              <div className="">
+                <div className="flex py-[24px] px-[27px] bg-[#131618] border border-solid border-[#282C31] rounded-[10px] w-fit">
+                  <span className="pr-[16px]">
+                    <BsInstagram />
+                  </span>
+                  <span className="pr-[16px]">
+                    <FaFacebookF />
+                  </span>
+                  <span className="pr-[16px]">
+                    <BsTwitterX />
+                  </span>
+                  <span>
+                    <BsLinkedin />
+                  </span>
                 </div>
               </div>
             </div>
